@@ -1,0 +1,8 @@
+git add . добавить все файлы в локальный репозиторий
+git commit -m "коментарий" загрузить локальный в репозиторий
+git status проверить что не загружено
+git log --oneline посмотреть все комиты
+git remote add origin https://github.com/rolets/videoTest.git
+git remote проверить подключение к удаленному репозиторию
+git push -u origin main первая заливка
+git push -r origin main обновление
