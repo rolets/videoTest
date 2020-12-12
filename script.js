@@ -12,8 +12,9 @@ const configuration = {
   iceServers: [
   {
 	  urls: 'stun:stun.l.google.com:19302'
-	
+
 }
+
 
 	//urls: 'turn:numb.viagenie.ca',
 	//credential: 'leto321678',
@@ -26,10 +27,10 @@ let room;
 let pc;
 
 
-		
+
 
 function onSuccess() {
-  
+
 };
 function onError(error) {
   console.error(error);
@@ -66,14 +67,14 @@ function sendMessage(message) {
 
 
 function startWebRTC(isOfferer) {
-	
+
 	room = drone.subscribe(roomName);
 room.on('data', message => {
     console.log('Received message', message);
     $('.chat').html(message);
   });
-  
-  
+
+
 
   pc = new RTCPeerConnection(configuration);
 
@@ -152,12 +153,10 @@ function localDescCreated(desc) {
       canvas.width = width;
       canvas.height = height;
       context.drawImage(video, 0, 0, width, height);
-    
+
       var data = canvas.toDataURL('image/png');
       photo.setAttribute('src', data);
     } else {
       clearphoto();
     }
   }
-  
-  
